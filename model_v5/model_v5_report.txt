@@ -1,0 +1,64 @@
+======================================================================
+MODEL V5 - TRAINING REPORT
+======================================================================
+
+
+ARCHITECTURE
+----------------------------------------------------------------------
+Input Shape: 128 timesteps × 4 features
+Output Classes: 4
+Model Type: 1D CNN Sequential
+Conv Filters: [64, 128, 64]
+Kernel Size: 3, Pool Size: 2
+Dropout Rate: 0.5
+
+TRAINING CONFIGURATION
+----------------------------------------------------------------------
+Max Epochs: 60
+Batch Size: 64
+Initial Learning Rate: 0.0005
+LR Decay: factor=0.5, patience=5
+Early Stopping Patience: 20
+L2 Regularization: 0.001
+Optimizer: adam
+Loss Function: categorical_crossentropy
+Class Weights: {0: 0.792973124300112, 1: 0.8172244662435084, 2: 0.8074401368301026, 3: 3.6128826530612246}
+
+DATASET
+----------------------------------------------------------------------
+Dataset File: motion_dataset_loso_v5.npz
+Training Samples: 5665
+Test Samples: 256
+Strategy: Leave-One-Subject-Out (LOSO)
+
+TRAINING RESULTS
+----------------------------------------------------------------------
+Epochs Trained: 57
+Final Train Accuracy: 0.8595
+Final Train Loss: 0.3852
+Final Validation Accuracy: 0.8945
+Final Validation Loss: 0.4091
+
+FINAL TEST EVALUATION (UNSEEN USER)
+----------------------------------------------------------------------
+Test Accuracy: 0.9219
+Test Loss: 0.3824
+
+CONFUSION MATRIX
+----------------------------------------------------------------------
+[[37  8  6  0]
+ [ 3 73  1  0]
+ [ 0  0 66  0]
+ [ 2  0  0 60]]
+
+======================================================================
+SAVED ARTIFACTS
+======================================================================
+1. best_motion_model_v5.keras - Complete trained model
+2. model_v5.weights.h5 - Model weights only
+3. model_v5_config.json - Model architecture configuration
+4. model_v5_metadata.json - Training metadata and results
+5. model_v5_history.npz - Training history curves
+6. model_v5_complete_session.npz - Complete training session data
+7. model_v5_report.txt - This report
+======================================================================
