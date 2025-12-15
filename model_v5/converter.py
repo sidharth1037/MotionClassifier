@@ -15,7 +15,7 @@ converter = tf.lite.TFLiteConverter.from_keras_model(model)
 tflite_model = converter.convert()
 
 # 3. Save
-tflite_filename = 'model_v5 .tflite'
+tflite_filename = 'model_v5.tflite'
 with open(tflite_filename, 'wb') as f:
     f.write(tflite_model)
 

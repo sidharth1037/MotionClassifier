@@ -2,7 +2,6 @@
 MODEL V5 - TRAINING REPORT
 ======================================================================
 
-Generated: 2025-12-16T00:01:47.738353
 
 ARCHITECTURE
 ----------------------------------------------------------------------
@@ -34,21 +33,20 @@ Strategy: Leave-One-Subject-Out (LOSO)
 
 TRAINING RESULTS
 ----------------------------------------------------------------------
-Epochs Trained: 47
-Final Train Accuracy: 0.8044
-Final Train Loss: 0.5116
-Final Validation Accuracy: 0.7383
-Final Validation Loss: 0.7214
+Epochs Trained: 57
+Final Train Accuracy: 0.8595
+Final Train Loss: 0.3852
+Final Validation Accuracy: 0.8945
+Final Validation Loss: 0.4091
 
 FINAL TEST EVALUATION (UNSEEN USER)
 ----------------------------------------------------------------------
-Test Accuracy: 0.8359
-Test Loss: 0.6077
+Test Accuracy: 0.9219
+Test Loss: 0.3824
 
 CONFUSION MATRIX
 ----------------------------------------------------------------------
-[[39  5  7  0]
- [13 61  3  0]
- [ 0  7 59  0]
- [ 7  0  0 55]]
-
+[[37  8  6  0]
+ [ 3 73  1  0]
+ [ 0  0 66  0]
+ [ 2  0  0 60]]
