@@ -1,0 +1,39 @@
+======================================================================
+MODEL V4 - TRAINING REPORT
+======================================================================
+
+
+ARCHITECTURE
+----------------------------------------------------------------------
+Input Shape: 128 timesteps � 4 features
+Output Classes: 4
+Model Type: 1D CNN Sequential
+
+TRAINING CONFIGURATION
+----------------------------------------------------------------------
+Max Epochs: 60
+Batch Size: 32
+Optimizer: adam
+Loss Function: categorical_crossentropy
+
+DATASET
+----------------------------------------------------------------------
+Dataset File: motion_dataset_loso_v4.npz
+Training Samples: 5665
+Test Samples: 256
+Strategy: Leave-One-Subject-Out (LOSO)
+
+TRAINING RESULTS
+----------------------------------------------------------------------
+Epochs Trained: 36
+Final Train Accuracy: 0.9057
+Final Train Loss: 0.2481
+Final Validation Accuracy: 0.8281
+Final Validation Loss: 0.4470
+
+FINAL TEST EVALUATION (UNSEEN USER)
+----------------------------------------------------------------------
+Test Accuracy: 0.8867
+Test Loss: 0.3670
+
+======================================================================

@@ -15,7 +15,6 @@ def load_data(data_dir):
     labels = []
     users = [] 
     
-    # UPDATED: Added 'idle' class
     class_map = {
         'walking': 0, 
         'upstairs': 1, 
@@ -70,4 +69,4 @@ print(f"User IDs found: {np.unique(users)}")
 print(f"Features: AccX, AccY, AccZ, Magnitude")
 
 np.savez_compressed(OUT_FILE, X=X, y=y, users=users)
-print(f"Saved to {OUT_FILE}. Now run 'split_normalize_loso_v4.py'.")
+print(f"Saved to {OUT_FILE}. Now run 'split_normalize'.")
