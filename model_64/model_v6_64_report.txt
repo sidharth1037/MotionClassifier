@@ -1,0 +1,73 @@
+======================================================================
+MODEL V6_64 - TRAINING REPORT
+======================================================================
+
+Generated: 2026-03-03T00:24:28.231700
+
+ARCHITECTURE
+----------------------------------------------------------------------
+Input Shape: 64 timesteps x 4 features
+Output Classes: 4
+Model Type: 1D CNN Sequential
+Conv Filters: [64, 128, 192]
+Kernel Sizes: [7, 5, 3]
+Pool Size: 2
+Dropout (conv/dense): 0.3/0.45
+Dense Units: [192, 96]
+
+TRAINING CONFIGURATION
+----------------------------------------------------------------------
+Max Epochs: 120
+Batch Size: 64
+Initial Learning Rate: 0.001
+LR Schedule: Cosine Annealing
+Label Smoothing: 0.1
+Early Stopping Patience: 30
+L2 Regularization: 0.0005
+Optimizer: adam
+Loss Function: categorical_crossentropy + label_smoothing
+Class Weights: {0: 0.7915977961432507, 1: 0.8163352272727272, 2: 0.8078436885015462, 3: 3.6512071156289707}
+Data Augmentation: ['jitter', 'scaling', 'time_shift']
+
+DATASET
+----------------------------------------------------------------------
+Dataset File: motion_dataset_loso_v6_64.npz
+Training Samples: 11494
+Test Samples: 518
+Strategy: Leave-One-Subject-Out (LOSO)
+Augmentation: jitter + scaling + time_shift (3 copies)
+
+TRAINING RESULTS
+----------------------------------------------------------------------
+Epochs Trained: 115
+Final Train Accuracy: 0.9510
+Final Train Loss: 0.4897
+Final Validation Accuracy: 0.7934
+Final Validation Loss: 0.7778
+
+FINAL TEST EVALUATION (UNSEEN USER)
+----------------------------------------------------------------------
+Test Accuracy: 0.8591
+Test Loss: 0.6893
+
+CONFUSION MATRIX
+----------------------------------------------------------------------
+Classes: ['Walking', 'Upstairs', 'Downstairs', 'Idle']
+[[ 65  21   9   9]
+ [ 18 133   5   0]
+ [  0   8 125   0]
+ [  2   0   1 122]]
+
+PER-CLASS METRICS
+----------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+     Walking     0.7647    0.6250    0.6878       104
+    Upstairs     0.8210    0.8526    0.8365       156
+  Downstairs     0.8929    0.9398    0.9158       133
+        Idle     0.9313    0.9760    0.9531       125
+
+    accuracy                         0.8591       518
+   macro avg     0.8525    0.8484    0.8483       518
+weighted avg     0.8548    0.8591    0.8551       518
+
